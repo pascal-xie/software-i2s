@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+  <components>
+    <component description="Rf Driver" name="platform.drivers.rf" provides="platform.drivers" requires="devices.QN908XC" type="driver" version="2.0.0">
+      <source path="./drivers">
+        <files mask="fsl_rf.c"/>
+        <files mask="fsl_rf.h"/>
+      </source>
+      <source path="./">
+        <files mask="fsl_rf.meta"/>
+      </source>
+    </component>
+  </components>
+</metadata>

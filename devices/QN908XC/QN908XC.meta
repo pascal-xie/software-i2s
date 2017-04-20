@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+  <components>
+    <component name="platform.devices.QN908XC" requires="devices.QN908XC" provides="platform.devices.device" type="driver" change_log="./ChangeLogKSDK.txt">
+      <source path="./">
+        <files mask="fsl_clock.c"/>
+        <files mask="fsl_clock.h"/>
+        <files mask="QN908XC.meta"/>
+        <files mask="QN908XC_device.meta"/>
+      </source>
+      <source path="./arm" requires="mdk">
+        <files mask="patch_ble_stack.lib"/>
+        <files mask="fw_symbols.txt"/>
+      </source>
+      <source path="./gcc" requires="armgcc">
+        <files mask="patchble_stack.lib"/>
+        <files mask="fw_symbols.txt"/>
+      </source>
+      <source path="./iar" requires="iar">
+        <files mask="patch_ble_stack.a"/>
+        <files mask="fw_symbols.txt"/>
+      </source>
+    </component>
+    <component name="platform.devices.QN908XC_debugger" type="debugger" requires="devices.QN908XC" provides="platform.devices.device platform.devices.QN908XC">
+      <source path="./">
+        <files mask="QN908XC.xml"/>
+      </source>
+    </component>
+    <component name="platform.devices.QN908XC_startup" type="startup" requires="devices.QN908XC" provides="platform.devices.device platform.devices.QN908XC">
+      <source path="./arm" requires="mdk">
+        <files mask="startup_QN908XC.s"/>
+      </source>
+      <source path="./gcc" requires="armgcc">
+        <files mask="startup_QN908XC.S"/>
+      </source>
+      <source path="./gcc" requires="atl">
+        <files mask="startup_QN908XC.S"/>
+      </source>
+      <source path="./gcc" requires="kds">
+        <files mask="startup_QN908XC.S"/>
+      </source>
+      <source path="./iar" requires="iar">
+        <files mask="startup_QN908XC.s"/>
+      </source>
+      <source path="./mcuxpresso" requires="mcuxpresso">
+        <files mask="startup_QN908XC.c"/>
+        <files mask="startup_QN908XC.cpp"/>
+      </source>
+    </component>
+    <component name="platform.devices.QN908XC_linker" type="linker" requires="devices.QN908XC" provides="platform.devices.device platform.devices.QN908XC">
+      <source path="./arm" requires="mdk">
+        <files mask="QN908XC.scf"/>
+      </source>
+      <source path="./gcc" requires="armgcc">
+        <files mask="QN908XC.ld"/>
+      </source>
+      <source path="./gcc" requires="atl">
+        <files mask="QN908XC.ld"/>
+      </source>
+      <source path="./gcc" requires="kds">
+        <files mask="QN908XC.ld"/>
+      </source>
+      <source path="./iar" requires="iar">
+        <files mask="QN908XC.icf"/>
+      </source>
+    </component>
+    <component name="platform.devices.QN908XC_CMSIS" type="CMSIS" requires="devices.QN908XC" provides="platform.devices.device platform.devices.QN908XC platform.devices.CMSIS">
+      <source path="./">
+        <files mask="fsl_device_registers.h"/>
+        <files mask="QN908XC.h"/>
+        <files mask="QN908XC_features.h"/>
+        <files mask="system_QN908XC.c"/>
+        <files mask="system_QN908XC.h"/>
+      </source>
+    </component>
+    <component name="platform.devices.QN908XC_flash" type="debugger" requires="devices.QN908XC" provides="platform.devices.device platform.devices.QN908XC">
+      <source path="./mcuxpresso" requires="mcuxpresso">
+        <files mask="QN908XC_512K.cfx"/>
+      </source>
+    </component>
+  </components>
+  <debug_configurations>
+    <debug_configuration id_refs="com.crt.advproject.config.exe.debug com.crt.advproject.config.exe.release" bindings="mcuxpresso devices.QN908XC">
+      <params>
+        <param id="internal.wiretype.release" name="internal.wiretype" value="SWD"/>
+        <param id="internal.has_swo.release" name="internal.has_swo" value="false"/>
+        <param id="internal.connect.script.debug.mcuxpresso" name="internal.connect.script" value="kinetisconnect.scp"/>
+      </params>
+      <drivers>
+        <driver memory_block="PROGRAM_FLASH">
+          <driver_binary path="devices/QN908XC/mcuxpresso">
+            <files mask="QN908XC_512K.cfx"/>
+          </driver_binary>
+        </driver>
+      </drivers>
+    </debug_configuration>
+  </debug_configurations>
+  <linker_settings>
+    <linker_setting nature="c_nature" bindings="devices.QN908XC">
+      <linker property="start_symbol" value="ResetISR"/>
+      <linker property="text_align" value="4"/>
+      <linker property="data_align" value="4"/>
+      <linker property="bss_align" value="4"/>
+      <linker property="mtb_supported" value="false"/>
+    </linker_setting>
+    <linker_setting nature="cpp_nature" bindings="devices.QN908XC">
+      <linker property="start_symbol" value="ResetISR"/>
+      <linker property="text_align" value="4"/>
+      <linker property="data_align" value="4"/>
+      <linker property="bss_align" value="4"/>
+      <linker property="mtb_supported" value="false"/>
+    </linker_setting>
+  </linker_settings>
+</metadata>
+

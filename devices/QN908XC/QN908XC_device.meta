@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<metadata>
+  <boards>
+    <board id="qn908xcdk" name="QN908XCDK" part_name="QN908X"/>
+  </boards>
+  <devices>
+    <device full_name="QN908XC" name="QN908XC" platform="QN" series="QN90XX" family="QN908XC" subfamily="QN908XC" frequency_mhz="32">
+      <core name="Cortex-M4F"/>
+      <memory ram_size_kb="128" flash_size_kb="512">
+        <memoryBlock id="PROGRAM_FLASH" name="PROGRAM_FLASH" addr="00" size="080000" type="Flash" access="RO"/>
+        <memoryBlock id="SRAM_0_9" name="SRAM_0_9" addr="4000000" size="020000" type="RAM" access="RW"/>
+      </memory>
+      <part name="QN908X"/>
+      <evaluation_boards>
+        <evaluation_board name="QN908XCDK"/>
+      </evaluation_boards>
+      <modules>
+        <ip_block version="ip_xxx_3511_fs_1.1.0"/>
+        <ip_block version="DriverType_LPC_CRC"/>
+        <ip_block version="DriverType_LPC_TIMER"/>
+        <ip_block version="DriverType_LPC_DMA"/>
+        <ip_block version="DriverType_LPC_FLEXCOMM"/>
+        <ip_block version="DriverType_LPC_I2C"/>
+        <ip_block version="DriverType_LPC_PINT"/>
+        <ip_block version="DriverType_LPC_SPI"/>
+        <ip_block version="DriverType_LPC_SPIFI"/>
+        <ip_block version="DriverType_LPC_SCT"/>
+        <ip_block version="DriverType_LPC_USART"/>
+        <ip_block version="DriverType_LPC_USB"/>
+        <ip_block version="DriverType_QN_ACMP"/>
+        <ip_block version="DriverType_QN_ADC"/>
+        <ip_block version="DriverType_QN_AGC"/>
+        <ip_block version="DriverType_QN_BOD"/>
+        <ip_block version="DriverType_QN_BLEDP"/>
+        <ip_block version="DriverType_QN_CALIB"/>
+        <ip_block version="DriverType_QN_CHRG"/>
+        <ip_block version="DriverType_QN_CS"/>
+        <ip_block version="DriverType_QN_DAC"/>
+        <ip_block version="DriverType_QN_DMAMUX"/>
+        <ip_block version="DriverType_QN_FLASH"/>
+        <ip_block version="DriverType_QN_FSP"/>
+        <ip_block version="DriverType_QN_GPIO"/>
+        <ip_block version="DriverType_QN_INPUTMUX"/>
+        <ip_block version="DriverType_QN_IOCON"/>
+        <ip_block version="DriverType_QN_PROP"/>
+        <ip_block version="DriverType_QN_QDEC"/>
+        <ip_block version="DriverType_QN_RNG"/>
+        <ip_block version="DriverType_QN_RTC"/>
+        <ip_block version="DriverType_QN_SYSCON"/>
+        <ip_block version="DriverType_QN_WDT"/>
+        <ip_block version="StackType_QN_BLE"/>
+      </modules>
+    </device>
+  </devices>
+</metadata>

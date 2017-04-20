@@ -1,0 +1,6 @@
+0000000c N $d
+0000003e t $d
+00000000 t $t
+00000000 T POWER_RegisterWakeupEntry
+         U g_MSP_Val
+0000002e t loop

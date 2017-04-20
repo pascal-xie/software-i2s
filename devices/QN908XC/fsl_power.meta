@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+  <components>
+    <component description="Power Driver" name="platform.drivers.power" provides="platform.drivers" requires="devices.QN908XC" type="driver" version="2.0.0">
+      <source path="./drivers">
+        <files mask="fsl_power.c"/>
+        <files mask="fsl_power.h"/>
+      </source>
+      <source path="./">
+        <files mask="fsl_power.meta"/>
+      </source>
+    </component>
+  </components>
+</metadata>

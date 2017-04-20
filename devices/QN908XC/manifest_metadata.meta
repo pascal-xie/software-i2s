@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>  
+  <components>  
+    <component name="manifest_metadata.QN908XC" requires="devices.QN908XC" provides="platform.devices.device">
+      <source path="./">
+        <files mask="manifest_metadata.meta"/>
+      </source>
+    </component>
+  </components>
+  <manifest_metadata_set>
+    <manifest_metadata key="description" bindings="devices.QN908XC">
+      <specific>
+        <content>The QN908XC are ARM Cortex-M4 based microcontrollers for embedded applications.</content>
+      </specific>
+    </manifest_metadata>
+    <manifest_metadata key="image" value="docs/images/device.jpg" bindings="devices.QN908XC"/>
+    <manifest_metadata key="vendor" value="NXP" bindings="devices.QN908XC"/>
+    <manifest_metadata key="vendor.device.type" value="LPC" bindings="devices.QN908XC"/>
+    <manifest_metadata key="href" value="http://www.nxp.com/lpc" bindings="devices.QN908XC"/>
+    <manifest_metadata key="html" bindings="devices.QN908XC">
+      <specific>
+        <content>
+The QN908XC are ARM Cortex-M4 based microcontrollers for embedded applications. These devices include an ARM Cortex-M4 coprocessor, up to 200 KB of on-chip SRAM, up to 512 KB on-chip flash, full-speed and high speed USB device interface with Crystal-less operation, a DMIC subsystem with PDM microphone interface and I²S, five general-purpose timers, one SCTimer/PWM, one RTC/alarm timer, one 24-bit Multi-Rate Timer (MRT), a Windowed Watchdog Timer (WWDT), eight flexible serial communication peripherals (each of which can be a USART, SPI, or I²C interface), and one 12-bit 5.0 Msamples/sec ADC, and a temperature sensor.&lt;br/&gt;
+The ARM Cortex-M4 is a 32-bit core that offers system enhancements such as low power consumption, enhanced debug features, and a high level of support block integration. The ARM Cortex-M4 CPU incorporates a 3-stage pipeline, uses a Harvard architecture with separate local instruction and data buses as well as a third bus for peripherals, and includes an internal prefetch unit that supports speculative branching. The ARM Cortex-M4 supports single-cycle digital signal processing and SIMD instructions. A hardware floating-point unit is integrated in the core.&lt;br/&gt; 
+        </content>
+      </specific>
+    </manifest_metadata>
+  </manifest_metadata_set>
+  <manifest_metadata_set>
+    <manifest_metadata key="description" bindings="devices.boards.qn908xcdk">
+      <specific>
+        <content>The QN family of boards provides a powerful and flexible development system for NXP®'s Cortex-M MCUs</content>
+      </specific>
+    </manifest_metadata>
+    <manifest_metadata key="href" value="http://www.nxp.com/products/:OM13092" bindings="devices.boards.qn908xcdk"/>
+    <manifest_metadata key="image" value="docs/images/QN908XCDK.gif" bindings="devices.boards.qn908xcdk"/>
+    <manifest_metadata key="vendor" value="NXP" bindings="devices.boards.qn908xcdk"/>
+    <manifest_metadata key="html" bindings="devices.boards.qn908xcdk">
+      <specific>
+        <content>
+The QN family of boards provides a powerful and flexible development system for NXP®'s Cortex-M MCUs. The QN908XC board has been developed by NXP to enable evaluation of and prototyping with the LPC54600 family of MCUs and its low power features make it as easy as possible to get started with your project.&lt;br/&gt;
+LPCXpresso™ is a low-cost development platform available from NXP supporting NXP's ARM-based microcontrollers. The platform is comprised of a simplified Eclipse-based IDE and low-cost target boards which include an attached JTAG debugger. LPCXpresso is an end-to-end solution enabling embedded engineers to develop their applications from initial evaluation to final production.
+        </content>
+      </specific>
+    </manifest_metadata>
+  </manifest_metadata_set>
+</metadata>
